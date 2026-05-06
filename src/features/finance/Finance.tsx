@@ -5,7 +5,7 @@ import useSWR from "swr";
 import { LoadingScreen } from "@/components/LoadingScreen";
 import { PageShell } from "@/components/PageShell";
 import { ThemeToggle } from "@/components/ThemeToggle";
-import { MdAdd, MdClose, MdCreditCard, MdList, MdPieChart, MdTrendingUp, MdTrendingDown, MdRepeat, MdTag, MdCalendarToday, MdAccountBalanceWallet, MdAttachMoney, MdKeyboardArrowDown } from 'react-icons/md';
+import { MdAdd, MdClose, MdCreditCard, MdList, MdPieChart, MdTrendingUp, MdTrendingDown, MdRepeat, MdTag, MdCalendarToday, MdAccountBalanceWallet, MdAttachMoney, MdKeyboardArrowDown, MdWallet } from 'react-icons/md';
 
 
 // Types
@@ -471,7 +471,7 @@ export function Finance() {
                 transactions.slice(0, 5).map((t) => <TransactionCard key={t.id} transaction={t} />)
               ) : (
                 <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed border-[var(--border)] py-12 text-center">
-                  <Wallet size={48} className="mb-4 text-[var(--muted)]" />
+                  <MdWallet size={48} className="mb-4 text-[var(--muted)]" />
                   <p className="text-[var(--muted)]">Nenhuma transação ainda</p>
                   <p className="mt-1 text-sm text-[var(--muted)]">Comece adicionando sua primeira transação</p>
                 </div>
